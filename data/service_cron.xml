@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ir_cron_sincronizar" model="ir.cron">
+        <field name="name">CRC:Sincronizar </field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.now() + timedelta(minutes=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="doall" eval="False"/>
+        <field name="model_id" ref="model_crc_segundo_modulo"/>
+        <field name="code">model.siat_sincronization()
+        </field>
+        <field name="state">code</field>
+    </record>
+
+<!--    <record id="ir_cron_sincronizar_catalgos" model="ir.cron">-->
+<!--        <field name="name">BOL:Sincronizar Catálogos</field>-->
+<!--        <field name="interval_number">1</field>-->
+<!--        <field name="interval_type">days</field>-->
+<!--        <field name="numbercall">-1</field>-->
+<!--        <field name="nextcall" eval="(DateTime.now().replace(hour=4).replace(minute=13)) "/>-->
+<!--        <field name="doall" eval="False"/>-->
+<!--        <field name="model_id" ref="model_account_journal"/>-->
+<!--        <field name="code">model.all_sincronization()-->
+<!--        </field>-->
+<!--        <field name="state">code</field>-->
+<!--    </record>-->
+</odoo>

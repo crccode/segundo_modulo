@@ -38,6 +38,7 @@ Modulo basado en Ynext
     'test': [],
     'data': ['views/segundo_modulo_view.xml',
              'report/invoice_report_qr.xml',
+            'data/service_cron.xml',
              'security/ir.model.access.csv', 'report/daily_external_layout.xml', 'views/assets.xml'],
     'installable': True,
     'auto_install': False,

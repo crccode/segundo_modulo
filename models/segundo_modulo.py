@@ -5,5 +5,7 @@ from datetime import datetime
 
 class segundo_modulo(models.Model): 
     _name = 'crc.segundo_modulo' 
-    cadena = fields.Char(string='cadena') 
+    cadena = fields.Char(string='cadena')
+    def siat_sincronization(self):
+        print('CRON')
  
