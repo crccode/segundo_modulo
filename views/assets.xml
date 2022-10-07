@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<odoo> 
+<!-- Comentario en la Estilos--> 
+      <template id="report_assets_common_inherit_style" name="map_static report common assets" inherit_id="web.report_assets_common"> 
+        <xpath expr="." position="inside"> 
+            <link rel="stylesheet" type="text/scss" href="/map_static/static/src/scss/style.scss"/> 
+        </xpath> 
+      </template> 
+</odoo> 

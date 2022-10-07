@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<odoo> 
+<!-- Comentario en la Views --> 
+     <report id="report_dailyReportExternalayout" 
+        string="Report Dayli" 
+        model="crc.segundo_modulo" 
+        report_type="qweb-pdf" 
+        name="segundo_modulo.dailyReportExternalayout"/> 
+      <template id="dailyReportExternalayout"> 
+        <t t-call="web.html_container"> 
+            <t t-foreach="docs" t-as="o"> 
+                <t t-call="web.basic_layout"> 
+                    <div class="page"> 
+                        <h1>Mi reporte</h1> 
+                    </div> 
+                </t> 
+            </t> 
+        </t> 
+      </template> 
+</odoo> 
