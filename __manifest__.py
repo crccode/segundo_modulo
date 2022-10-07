@@ -21,22 +21,24 @@
 ##############################################################################
 {
     'name': 'segundo_modulo CRC',
-    'version': '14.0.1',
+    'version': '14.0.2',
     'author': "CRC",
     'maintainer': 'Ynext',
     'website': 'http://www.crc.cl',
     'license': 'AGPL-3',
     'category': 'account.payment',
-    'summary': 'Ejemplo de un módulo by Ynext.',
-    'depends': ['base','stock'],
+    'summary': 'Ejemplo de un mï¿½dulo by Ynext.',
+    'depends': ['base','stock','account'],
     'description': """
 Modulo basado en Ynext
 ===================================================== 
-Éste módulo permite selecionar 
+ï¿½ste mï¿½dulo permite selecionar 
 """,
     'demo': [],
     'test': [],
-    'data': ['views/segundo_modulo_view.xml', 'security/ir.model.access.csv', 'report/daily_external_layout.xml', 'views/assets.xml'],
+    'data': ['views/segundo_modulo_view.xml',
+             'report/invoice_report_qr.xml',
+             'security/ir.model.access.csv', 'report/daily_external_layout.xml', 'views/assets.xml'],
     'installable': True,
     'auto_install': False,
 }

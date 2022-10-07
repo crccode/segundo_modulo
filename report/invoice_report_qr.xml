@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<!-- Descomentar cuando se haga la impresión -->
+				<template id="report_invoice_document_ccbolivia" inherit_id="account.report_invoice_document" >
+					<xpath expr="//t" position="replace">
+						<t t-call="web.basic_layout">
+							<t t-set="o" t-value="o.with_context(lang=lang)" />
+							<t t-set="address">
+								<address></address>
+								<div t-if="o.partner_id.vat" class="mt16">
+									<t t-if="o.company_id.country_id.vat_label" t-esc="o.company_id.country_id.vat_label" id="inv_tax_id_label"/>
+									<t t-else="">Tax ID</t>: <span t-field="o.partner_id.vat"/></div>
+							</t>
+							<div id="hoja1">
+								<div id="div1">
+								</div>
+								<div id="div2">
+									<p id="factura"><strong>FACTURA CRC</strong></p>
+									<p>(Con Derecho a Crédito Fiscal)</p>
+								</div>
+<!--								falta agregar los camposdel template-->
+								<div id="div3">
+									<div id="div31">
+										<span><strong>Fecha:</strong></span><br/>
+										<span><strong>Nombre/Razon Social:</strong></span>
+									</div>
+									<div id="div32">
+										<span t-field="o.fecha_emision_xml"></span><br/>
+										<span t-field="o.razonsocial"></span>
+									</div>
+									<div id="div33">
+										<span><strong>NIT/CI/CEX:</strong></span><br/>
+										<span><strong>Cod. Cliente:</strong></span>
+									</div>
+									<div id="div34">
+										<span t-field="o.nit"></span><br/>
+										<span t-field="o.partner_id.ref"></span>
+									</div>
+								</div>
+								<div id="div4">
+									<br/>
+									<table>
+									<tr>
+									  <th id="codigo">CODIGO <br/> PRODUCTO /<br/> SERVICIO</th>
+									  <th id="cantidad">CANTIDAD</th>
+									  <th id="udm">UNIDAD DE<br/> MEDIDA</th>
+									  <th id="descripcion">DESCRIPCION</th>
+									  <th id="preciou">PRECIO <br/>UNITARIO</th>
+									  <th id="descuento">DESCUENTO</th>
+									  <th id="subtotal">SUBTOTAL</th>
+									</tr>
+<!--										esto es una prueba del contenido de las tuplas de la tabla-->
+										<t t-foreach="o.invoice_line_ids" t-as="l">
+										<t t-if="not display_type">
+											<tr>
+												<td><span t-field="l.product_id.default_code"></span></td>
+												<td><span t-field="l.quantity"></span></td>
+												<td><span>1</span></td>
+												<td><span t-field="l.product_id.name"></span></td>
+												<td><span t-field="l.price_unit"></span></td>
+												<td><span>0</span></td>
+												<td><span t-field="l.price_total"></span></td>
+											</tr>
+										</t>
+										</t>
+								  </table>
+								</div>
+								<br/>
+								<br/>
+								<br/>
+								<div id="div5">
+									<div id="div51">
+										<p>ESTA FACTURA CONTRIBUYE AL DESARROLLO DEL PAIS, EL USO ILÍCITO SERÁ SANCIONADO PENALMENTE DE ACUERDO A LEY</p><br/>
+										<div id="final">
+										<p>Ley N° 453: El proveedor deberá entregar el producto en las modalidades y términos ofertados o convenidos.</p>
+										<p>"Este documento es la Representación Gráfica de un Documento Fiscal Digital emitido en una modalidad de facturación en linea</p>
+										</div>
+									</div>
+									<div id="div52">
+										INSERTAR QR
+									</div>
+								</div>
+							</div>
+						</t>
+
+					</xpath>
+				</template>
+	</data>
+	</odoo>

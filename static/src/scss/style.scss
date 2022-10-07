@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-h1{ 
+h1{
     background-color: red; 
 } 
+
+
+#div2{
+    text-align:center;
+}
+#div31{
+    width: 25%;
+    float:left;
+}
+#div32{
+    width: 45%;
+    float:left;
+}
+#div33{
+    width: 12%;
+    float:left;
+}
+#div34{
+    width: 18%;
+    float:left;
+}
+#factura{
+    line-height:80%;
+}
+table{
+  width:100%;
+}
+
+table,th,td{
+    border:1px solid black;
+}
+
+th{
+    text-align:center;
+}
+#div51{
+    font-size:12px;
+    width: 90%;
+    float:left;
+}
+#div51>p{
+    margin-left:5px;
+}
+#div52{
+    width: 10%;
+    float:left;
+    border:1px solid black
+}
+#final{
+    text-align:center;
+}

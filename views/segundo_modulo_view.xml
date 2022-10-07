@@ -6,7 +6,8 @@
         <field name="model">crc.segundo_modulo</field> 
         <field name="arch" type="xml"> 
             <form string="Listado de Segundo_modulo"> 
-                <group> 
+                <group>
+                    <H1>HOLA</H1>
                     <field name="cadena"/> 
                 </group> 
             </form> 
