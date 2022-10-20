@@ -39,6 +39,8 @@ Modulo basado en Ynext
     'data': ['views/segundo_modulo_view.xml',
              'report/invoice_report_qr.xml',
             'data/service_cron.xml',
+            'wizard/create_appointment_view.xml',
+            'wizard/search_appointment_view.xml',
              'security/ir.model.access.csv', 'report/daily_external_layout.xml', 'views/assets.xml'],
     'installable': True,
     'auto_install': False,
